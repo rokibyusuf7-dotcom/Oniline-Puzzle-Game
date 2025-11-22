@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Puzzle Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ✅ Logo -->
+  <img id="logo" src="logo.png" alt="Game Logo">
+
+  <h1>Memory Puzzle Game</h1>
+
+  <!-- ✅ Settings Button -->
+  <button id="settingsBtn">⚙️ Settings</button>
+
+  <!-- ✅ Timer & Moves Display -->
+  <div id="infoBar">
+    <span id="timer">Time: 0s</span>
+    <span id="moves">Moves: 0</span>
+    <span id="levelDisplay">Level: 1</span>
+  </div>
+
+  <!-- ✅ Popup Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span id="closeBtn">&times;</span>
+
+      <h2>Settings</h2>
+
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <br><br>
+
+      <!-- ✅ Timer Toggle -->
+      <label>
+        <input type="checkbox" id="timerToggle" checked>
+        Enable Timer
+      </label>
+
+      <br><br>
+
+      <!-- ✅ Sound Toggle -->
+      <label>
+        <input type="checkbox" id="soundToggle" checked>
+        Enable Sound
+      </label>
+
+      <br><br>
+
+      <!-- ✅ Theme Toggle -->
+      <label for="themeSelect">Theme:</label>
+      <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <br><br>
+
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+
+  <!-- ✅ Game Board -->
+  <div id="game"></div>
+
+  <!-- ✅ Full Screen Win Overlay -->
+  <div id="winOverlay">
+    <div id="winBox">
+      <h2>You Win!</h2>
+      <p id="winStats"></p>
+      <button id="nextLevelBtn">Next Level</button>
+    </div>
+  </div>
+
+  <audio id="matchSound" src="match.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
